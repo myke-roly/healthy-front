@@ -1,0 +1,23 @@
+@import "theme";
+
+.more {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:hover {
+    background: #041527;
+  }
+
+  &__icon {
+    text-align: center;
+
+    path {
+      stroke: $green-main;
+    }
+  }
+}

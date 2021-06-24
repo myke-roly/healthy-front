@@ -1,0 +1,63 @@
+@import "theme";
+
+@keyframes downModal {
+  from {
+    margin-top: -100%;
+  }
+
+  to {
+    margin-top: 0;
+  }
+}
+
+.modal__confirm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000000c2;
+  border-radius: 0 0 10px 10px;
+  z-index: 10000000;
+  animation: downModal .3s ease;
+  padding: $s1 $s0;
+
+  @include desktop {
+    max-width: 500px;
+    left: 30%;
+  }
+
+  @include tablet {
+    max-width: 500px;
+    left: 25%;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.2em;
+    color: $ivory;
+  }
+
+  &--buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+
+    button {
+      width: 48%;
+      padding: .7rem 1rem;
+      color: white;
+      border: none;
+      border-radius: 6px;
+
+      &:nth-child(1) {
+        background: #114575;
+      }
+
+      &:nth-child(2) {
+        background: #e74162;
+      }
+    }
+
+  }
+}

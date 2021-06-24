@@ -1,0 +1,132 @@
+@import "theme";
+
+.form__login {
+	font-family: $font-plain;
+	font-size: $s0;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+
+	@include desktop {
+		width: 100%;
+		justify-content: center;
+		height: auto;
+	}
+
+	@include tablet {
+		width: 100%;
+		justify-content: flex-start;
+		height: auto;
+	}
+
+	&--input {
+		margin-bottom: $s1;
+
+		label {
+			color: $ivory;
+			font-size: $s1c;
+			margin-bottom: $s1c;
+		}
+
+		.input__container {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: $medium-grey;
+			border-radius: $radius-1;
+			width: 100%;
+			margin-top: $s-2;
+
+			input {
+				margin-bottom: 0px;
+				margin-top: 0px;
+				border-radius: $radius-1;
+			}
+
+			.input__icon {
+				width: 15%;
+				text-align: center;
+
+				@include desktop {
+					width: 10%;
+					display: flex;
+					align-items: center;
+				}
+
+				@include tablet {
+					width: 10%;
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+
+		input {
+			width: 100%;
+			border: none;
+			font-size: $s0;
+			color: $ivory;
+			padding: $s-1;
+			margin-bottom: 0;
+			margin-top: $s-2;
+			border-radius: $radius-1;
+			background-color: $medium-grey;
+			height: 50px;
+
+			@include desktop {
+				height: 70px;
+			}
+
+			@include tablet {
+				height: 70px;
+			}
+
+			&.input-login {
+				background-color: $medium-grey;
+			}
+
+			&::placeholder {
+				opacity: 1;
+				color: $light-grey;
+			}
+
+			&:valid {
+				background-color: $medium-grey;
+			}
+
+			&:focus {
+				border: none;
+			}
+
+			&:focus-visible {
+				outline: none;
+			}
+
+			&[name="password"] {
+				width: 80%;
+			}
+		}
+	}
+
+	p {
+		color: $light-grey;
+		font-size: $s-1;
+		margin-top: 0.5rem;
+	}
+
+	[role="button"] {
+		cursor: pointer;
+	}
+
+	&.button__login {
+		margin-bottom: $s-2;
+	}
+
+	.forgot-password {
+		width: fit-content;
+		color: $green-main;
+		margin-bottom: $s1b;
+	}
+}

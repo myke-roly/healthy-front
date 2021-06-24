@@ -1,0 +1,53 @@
+@import "theme";
+
+.card__detail {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 11100;
+  height: auto;
+  background: $dark-blue;
+
+  @include desktop {
+    border: 1px solid rgb(88, 88, 88);
+    min-height: auto;
+    max-width: 1366px;
+    width: 90%;
+    margin-top: 3rem;
+    padding: 3rem;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+
+    .card__header,
+    .card__content {
+      width: 50%;
+      min-height: auto;
+    }
+  }
+
+  @include tablet {
+    border: 1px solid rgb(88, 88, 88);
+    min-height: auto;
+    margin-top: 2rem;
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    max-width: 1200px;
+    gap: .5rem;
+
+    .card__header,
+    .card__content {
+      width: 50%;
+      min-height: auto;
+    }
+  }
+}

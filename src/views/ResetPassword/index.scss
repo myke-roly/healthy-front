@@ -1,0 +1,79 @@
+@import "theme";
+
+.recover__pass {
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: $s0;
+  color: $ivory;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #041a2f 43.38%, rgba(3, 17, 31, 0.5) 99.98%),
+    url("../../assets/img/recover-password.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .span {
+    color: $green-main;
+  }
+
+  @include desktop {
+    justify-content: center;
+  }
+
+  .recover__card {
+    margin-top: 15px;
+    max-width: 400px;
+    border-radius: 10px;
+    width: 100%;
+
+    &--title {
+      font-weight: 500;
+      text-align: center;
+      font-size: $s1b;
+      color: #9ca9b6;
+    }
+
+    &--msg {
+      margin: 1.5rem 0;
+      font-size: 14px;
+      text-align: center;
+      color: #9ca9b6;
+    }
+
+    .input {
+      font-size: $s0;
+      width: 100%;
+      border-radius: $radius-1;
+      font-size: $s0;
+      background-color: $medium-grey;
+      border: 2px solid #807f7f;
+      color: $ivory;
+      padding: $s0;
+      text-align: center;
+    }
+
+    span {
+      display: inline-block;
+      text-align: center;
+      font-size: $s0;
+      text-transform: uppercase;
+      color: $green-main;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+
+    .error {
+      color: rgb(235, 121, 121);
+      margin-top: $s-2;
+      font-size: $s-1 + 1;
+    }
+
+    .button-recover {
+      width: 100%;
+      background-image: $main-gradient;
+    }
+  }
+}

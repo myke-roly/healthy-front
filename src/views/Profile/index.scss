@@ -1,0 +1,30 @@
+@import "theme";
+
+.profile {
+  padding: $s0;
+  padding-bottom: $s5;
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  @include desktop {
+    padding: $s0 0;
+  }
+
+  @include tablet {
+    padding: $s0 0;
+  }
+
+  .more {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.4rem;
+    @include desktop {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+}
